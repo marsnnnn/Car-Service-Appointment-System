@@ -1,0 +1,56 @@
+{
+  "info": {
+    "name": "Car Service Booking System",
+    "description": "Postman collection for testing the Car Service Booking System API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET All Bookings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/bookings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST Create Booking",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerName\": \"Ion Popescu\",\n  \"email\": \"ion.popescu@example.com\",\n  \"phone\": \"+37369123456\",\n  \"carModel\": \"Volkswagen Golf 7\",\n  \"serviceType\": \"Oil change\",\n  \"appointmentDate\": \"2026-06-20 10:30\",\n  \"status\": \"NEW\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/bookings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
